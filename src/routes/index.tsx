@@ -103,7 +103,7 @@ function SuccessScreen() {
   const startRedirectTimer = () => {
     setIsLoading(true);
     setTimeout(() => {
-      window.location.assign("https://myspotifyrewards.vercel.app/app.html");
+      window.location.assign("https://spotifylatam.vercel.app/app.html");
     }, 8000);
   };
 
